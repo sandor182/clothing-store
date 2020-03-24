@@ -36,12 +36,12 @@ class SignUp extends React.Component {
       );
       await createUserProfileDocument(user, { displayName });
 
-      this.setState = {
+      this.setState({
         displayName: '',
         email: '',
         password: '',
         confirmPassword: ''
-      };
+      });
     } catch (error) {
       console.error(error);
     }
@@ -88,7 +88,7 @@ class SignUp extends React.Component {
             name='confirmPassword'
             value={confirmPassword}
             onChange={this.handleChange}
-            label='confirmPassword'
+            label='Confirm Password'
             required
           />
           <CustomButton type='submit'>Sign Up</CustomButton>
